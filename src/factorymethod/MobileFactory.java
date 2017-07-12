@@ -1,5 +1,7 @@
 package factorymethod;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 
 /**
@@ -15,6 +17,7 @@ public class MobileFactory {
      * @param string 类型
      * @return 根据类型创建不同的对象
      */
+    @Nullable
     public static Mobile createMoblie(String string) {
         if (Objects.equals("smart", string)) {
             return new SmartMobile();
